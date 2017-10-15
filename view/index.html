@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	      content=" height = device-height,
+	                width = device-width,
+	                initial-scale = 1.0,
+	                minimum-scale = 1.0,
+	                maximum-scale = 1.0,
+	                user-scalable = no"/>
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="../static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/all.css"/>
+		<title>书城首页</title>
+		<!--<style type="text/css">
+			.container-wrap{
+				height: 100%;
+				overflow: hidden;
+			}
+			.container-scroll{
+				position: absolute;
+				top: 45px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				overflow-y: scroll;
+			}
+		</style>-->
+	</head>
+	<body>
+		<div id="app" style="734px;overflow: hidden;">
+			<% include include/header.html %>
+			<div>
+				<div class="container-wrap">
+					<div class="container-scroll">
+						<% include include/index-top.html %>
+						<% include include/index-hot.html %>
+						<% include include/index-recommend.html %>
+						<% include include/index-female.html %>
+						<% include include/index-male.html %>
+						<% include include/index-free.html %>
+						<% include include/index-bottom.html %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../static/script/vue.js"></script>
+	<script src="../static/script/zepto.js"></script>
+	<script src="../static/script/pages/index.js"></script>
+</html>
