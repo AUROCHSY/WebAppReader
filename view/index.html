@@ -11,12 +11,13 @@
 	                user-scalable = no"/>
 		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" type="text/css" href="../static/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../static/css/all.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../static/css/all.css"/>-->
 		<title>书城首页</title>
-		<!--<style type="text/css">
+		<style type="text/css">
 			.container-wrap{
 				height: 100%;
 				overflow: hidden;
+				/*position: relative;*/
 			}
 			.container-scroll{
 				position: absolute;
@@ -26,13 +27,13 @@
 				right: 0px;
 				overflow-y: scroll;
 			}
-		</style>-->
+		</style>
 	</head>
 	<body>
-		<div id="app" style="734px;overflow: hidden;">
+		<div id="app"><!-- style="width: 734px;overflow: hidden;"-->
 			<% include include/header.html %>
-			<div>
-				<div class="container-wrap">
+			<div style="width: 1468px;transition-duration: {{duration}}s;transform: translate3d({{position}}px,0px,0px);"></div>
+				<div class="container-wrap" style="width: 734px;float: left;">
 					<div class="container-scroll">
 						<% include include/index-top.html %>
 						<% include include/index-hot.html %>
@@ -42,6 +43,9 @@
 						<% include include/index-free.html %>
 						<% include include/index-bottom.html %>
 					</div>
+				</div>
+				<div style="width: 734px;float: left;display: none;">
+					<% include include/index-shelf.html %>
 				</div>
 			</div>
 		</div>
